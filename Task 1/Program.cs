@@ -1,46 +1,37 @@
-﻿public class Operators
+﻿
+public class Operators
 {
+    // Method to add two numbers
     public void Add(int a, int b)
     {
         Console.WriteLine("Sum: " + (a + b));
     }
 
+    // Method to subtract two numbers
     public void Subtract(int a, int b)
     {
         Console.WriteLine("Difference: " + (a - b));
     }
 
+    // Method to multiply two numbers
     public void Multiply(int a, int b)
     {
         Console.WriteLine("Product: " + (a * b));
     }
 
+    // Method to divide two numbers
     public void Divide(int a, int b)
     {
         if (b != 0)
-            Console.WriteLine("Division: " + ((double)a / b));
+            Console.WriteLine("Quotient: " + ((double)a / b));
         else
-            Console.WriteLine("Cannot divide by zero!");
+            Console.WriteLine("Error: Division by zero is not allowed.");
     }
 
+    // Method to find whether a number is odd or even using ternary operator
     public void OddEvenFinder(int number)
     {
         string result = (number % 2 == 0) ? "Even Number" : "Odd Number";
         Console.WriteLine(result);
-    }
-}
-
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        Operators op = new Operators();
-
-        op.Add(10, 5);
-        op.Subtract(10, 5);
-        op.Multiply(10, 5);
-        op.Divide(10, 5);
-        op.OddEvenFinder(10);
-        op.OddEvenFinder(7);
     }
 }
