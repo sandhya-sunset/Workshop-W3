@@ -1,12 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Task_2
+public class NullOperations
 {
-    internal class NullOperator
+    public void PerformNullChecks()
     {
+        string username = null;
+
+        string message = (username == null) ? "Username is not available" : username;
+        Console.WriteLine(message);
+
+        Console.WriteLine(username ?? "Username is not available (using ?? operator)");
+
+        username ??= "DefaultUser";
+        Console.WriteLine("Updated Username: " + username);
     }
 }

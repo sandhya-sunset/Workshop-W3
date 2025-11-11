@@ -1,10 +1,10 @@
-﻿namespace Task_2
+﻿using System;
+
+public class Program
 {
-    internal class Program
+    public static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        NullOperations nullOps = new NullOperations();
+        nullOps.PerformNullChecks();
     }
 }
